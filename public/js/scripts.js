@@ -47,7 +47,11 @@ const clickMe = () => {
         $('#formSubmit').click(()=>{
             submitForm();
         })
+
+        getCards();
         addCards(cardList);
         $('.modal').modal();
         });    
+
+        
     
