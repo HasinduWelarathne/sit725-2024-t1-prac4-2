@@ -1,16 +1,19 @@
 {
-  "name": "sit725-2024-t1-prac4-2",
+  "name": "sit725-2022-t1-prac4",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "SIT 725 2024",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/HasinduWelarathne/sit725-2024-t1-prac4-2.git"
   },
+  "keywords": [
+    "Express",
+    "NodeJs"
+  ],
   "author": "Hasindu Welarathne",
   "license": "ISC",
   "bugs": {
@@ -18,7 +21,10 @@
   },
   "homepage": "https://github.com/HasinduWelarathne/sit725-2024-t1-prac4-2/blob/main/README.md",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "monodb": "^1.5.1"
+    "mongodb": "^4.17.2",
+    "mongoose": "^8.3.0"
   }
 }

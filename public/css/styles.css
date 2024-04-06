@@ -14,6 +14,7 @@
     .materialboxed-image {
     margin: 0 auto;
     height: 400px;
+    display: block;
     }
 
     .container {
