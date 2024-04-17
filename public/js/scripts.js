@@ -2,9 +2,9 @@ const clickMe = () => {
     alert("Thanks for clicking me. Hope you have a nice day!")
 }
 
-const postCat = (project) => {
+const postProject = (project) => {
     $.ajax({
-        url: 'http://localhost:5500/api/projects',
+        url: 'http://localhost:5500/api/project',
         data: project,
         type: 'POST',
         success: (result) => {
@@ -22,12 +22,11 @@ const submitForm = () => {
     formData.description = $('#description').val();
 
     console.log("Form Data Submitted: ", formData);
-    postCat(formData);
-
+    postProject(formData);
 }
 
-const getAllCats = () => {
-    $.get('http://localhost:5500/api/projects',(response) => {
+const getAllProjects = () => {
+    $.get('http://localhost:5500/api/project',(response) => {
         if(response.statusCode==200){
             console.log(response)
             addCards(response.data);
@@ -52,13 +51,11 @@ const addCards = (items) => {
     });
 }
 
-
-
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{
         submitForm();
     })
-    getAllCats();
+    getAllProjects();
     $('.modal').modal();
-  });
+});
